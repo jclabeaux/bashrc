@@ -14,15 +14,15 @@ C8='\[\033[0;34m\]'     # blue
 # Reset
 Color_Off='\e[0m'       # Text Reset
 # Prompt Color Foreground (follow with 0-256 color code, followed by "m" in prompt)
-PFG='\e[48;5;'
+PFG='\e[38;5;'
 # Prompt Color Background (follow with 0-256 color code, followed by "m" in prompt)
-PBG='\e[38;5;'
+PBG='\e[48;5;'
 # Foreground color (for LS_COLORS)
-LFG='48;5;'
+LFG='38;5;'
 
 # Set the prompt
-USER_PROMPT="\e[1;44;37m"\\u$Color_Off
-HOST_PROMPT="${PFG}237m${PBG}255m"\\h$Color_Off
+USER_PROMPT="${PFG}255m${PBG}21m"\\u$Color_Off
+HOST_PROMPT="${PFG}255m${PBG}237m"\\h$Color_Off
 PS1="$C1($USER_PROMPT$C6@$HOST_PROMPT$C1)$C6-$C1($C5\w$C1)\n$C6\$$C0 "
 
 # Colors for ls files
